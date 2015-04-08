@@ -21,12 +21,12 @@ public class SideFoundClass {
             a = ((p / 2) + Math.sqrt(discriminant)) / 2;
             b = p / 2 - a;
 //            resultstr = "Rectangle sides: " + a + ", " + b;
-            resultstr = "Rectangle sides: " + String.format("%g",a) + ", " + String.format("%g",b);
+            resultstr = "Rectangle sides: " + String.format("%2.2f",a) + " and " + String.format("%2.2f",b);
         } else {
             a = p / 4;
             b = p / 4;
 //            resultstr = "Rectangle sides: " + a + ", " + b;
-            resultstr = "Rectangle sides: " + String.format("%g",a) + ", " + String.format("%g",b);
+            resultstr = "Rectangle sides: " + String.format("%2.2f",a) + " and " + String.format("%2.2f",b);
         }
         JOptionPane.showMessageDialog(null, resultstr);
     }

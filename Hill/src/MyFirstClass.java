@@ -6,7 +6,7 @@ public class MyFirstClass {
         double a=100;
         double b=3;
 
-        System.out.println(String.format("%g",a/b));
+        System.out.println(String.format("%2f",a/b));
      //   byte bb=(byte) 127;
      //   int i=bb;
       //  System.out.println(b);

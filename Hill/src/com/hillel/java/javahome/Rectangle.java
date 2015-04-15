@@ -1,3 +1,5 @@
+package com.hillel.java.javahome;
+
 /**
  * Created by KRAB on 15.04.2015.
  */
@@ -19,7 +21,7 @@ public class Rectangle {
     }
 
     public String toString(){
-        return "Rectangle side A = "+this.sideA+", side B = "+this.sideB;
+        return "com.hillel.java.javahome.Rectangle side A = "+this.sideA+", side B = "+this.sideB;
 
     }
 }

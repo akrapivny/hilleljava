@@ -1,3 +1,5 @@
+package com.hillel.java.javahome;
+
 import javax.swing.*;
 
 /**

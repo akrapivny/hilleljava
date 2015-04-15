@@ -1,3 +1,5 @@
+package com.hillel.java.oopBasics;
+
 import java.util.Arrays;
 
 /**
@@ -5,16 +7,39 @@ import java.util.Arrays;
  */
 public class Cat {
 
-    static int nawCount = 4;
-    String name;
-    int age;
-    String vaccines[] = new String[10];
-    int vaccineCout = 0;
+    static final int nawCount = 4;
+
+
+    private String name;
+    private int age;
+    private Vaccine vaccines[] = new Vaccine[10];
+    private int vaccineCout = 0;
+    private String ownerName;
 
     //construktor kotorij java delaet sama.
-    /*public Cat(){
+    /*public com.hillel.java.oopBasics.Cat(){
 
     }*/
+
+    //geter polya name
+    public String getName() {
+        return name;
+    }
+
+/*
+    public String getOwnerName() {return ownerName;}
+    public void setOwnerName(String ownerName);{
+        this.ownerName=ownerName;
+    }
+*/
+
+    public int getAge(){return age;}
+    public void setAge(int age){
+        if (age<0){
+            throw new RuntimeException("Incorrect age value: " + age);
+        }
+        this.age = age;
+    }
 
     //construktor
     public Cat(String name, int age) {
@@ -23,14 +48,19 @@ public class Cat {
 
     }
 
+    public Cat() {
+
+    }
+
     public String toString() {
-        String result = "Cat ";
+        String result;
+        result= "com.hillel.java.oopBasics.Cat ";
         result += name + " " + age + " years" + Arrays.toString(vaccines);
         return result;
 
     }
 
-    public void acceptVaccine(String vaccine) {
+    public void acceptVaccine(Vaccine vaccine) {
         vaccines[vaccineCout] = vaccine;
         vaccineCout++;
 

@@ -1,3 +1,5 @@
+package com.hillel.java.oopBasics;
+
 import java.util.Arrays;
 
 /**
@@ -21,7 +23,7 @@ public class Vet {
     public void makeVaccine() {
         for (int i = 0; i < registered; i++) {
             Cat cat = vetList[i];
-            cat.acceptVaccine("SVG");
+            cat.acceptVaccine(Vaccine.BCG);
         }
 
     }

@@ -12,7 +12,7 @@ public class ImprovedArray {
 
     public void add(String value) {
         if (counter >= myArray.length) {
-            myArray = Arrays.copyOf(myArray, counter + 1);
+            myArray = Arrays.copyOf(myArray, counter * 2 );
         }
         myArray[counter] = value;
         counter++;
@@ -52,4 +52,9 @@ public class ImprovedArray {
         }
         return result;
     }
+
+
+
+
+
 }

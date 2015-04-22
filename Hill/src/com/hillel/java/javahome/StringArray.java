@@ -1,5 +1,7 @@
 package com.hillel.java.javahome;
 
+import com.sun.deploy.util.ArrayUtil;
+
 import java.util.Arrays;
 
 /**
@@ -51,13 +53,13 @@ public class StringArray {
 
     public String toString() {
         String res = "[";
-            for (int j = 0; j <size(); j++) {
-            res +=get(j);
-                if (j+1<size()) {
-                    res +=", ";
-                }
+        for (int j = 0; j < size(); j++) {
+            res += get(j);
+            if (j + 1 < size()) {
+                res += ", ";
+            }
         }
-        res +="]";
+        res += "]";
         return res;
     }
 
@@ -65,4 +67,31 @@ public class StringArray {
     private void resize() {
         array = Arrays.copyOf(array, array.length * 2);
     }
+
+
+    public String remove(int index) {
+        if (index >= counter) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
+        }
+        String result = array[index];
+        for (int j = index; j < size()-1; j++) {
+            array[j] = array[j+1];
+        }
+        counter--;
+        return result;
+    }
+
+    public void insert(int index, String value) {
+        if (index >= counter) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
+        }
+        add(array[counter]);
+        for (int j = index; j < size() - 1; j++) {
+            array[j + 1] = array[j];
+        }
+        array[index] = value;
+
+
+    }
+
 }

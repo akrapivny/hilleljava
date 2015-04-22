@@ -8,8 +8,21 @@ import java.util.Arrays;
 public class ArrayTest {
 
     public static void main(String[] args) {
-        ImprovedArray myArray = new ImprovedArray();
+        StringArray myArray = new StringArray();
         System.out.println(myArray.toString());
+        myArray.add("VALUE1");
+        myArray.add("VALUE2");
+        myArray.add("VALUE3");
+        System.out.println(myArray.toString());
+        myArray.insert(2, "vvv");
+        System.out.println(myArray.toString());
+        myArray.remove(1);
+        System.out.println(myArray.toString());
+        myArray.remove(1);
+        System.out.println(myArray.toString());
+        myArray.remove(0);
+        System.out.println(myArray.toString());
+        /*System.out.println(myArray.toString());
         System.out.println("Count of array element: "+myArray.size());
         System.out.println("Array element[5] value: "+ myArray.get(5));
         System.out.println("Add element with value: VALUE1");
@@ -31,6 +44,7 @@ public class ArrayTest {
         }
         System.out.println("Count of array element: " + myArray.size());
         System.out.println(myArray.toString());
+        assertEquals();*/
     }
 
 

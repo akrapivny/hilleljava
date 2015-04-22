@@ -77,7 +77,7 @@ public class LinkedCells {
                 currentCell = currentCell.getNext();
                 currentIndex++;
             }
-            result = currentCell.getValue();
+            result = currentCell.getNext().getValue();
             currentCell.setNext(currentCell.getNext().getNext());
         }
         counter--;

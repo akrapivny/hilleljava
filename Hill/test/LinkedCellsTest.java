@@ -48,10 +48,12 @@ public class LinkedCellsTest {
         myCells.add("D");
         assertEquals(4, myCells.size());
         assertEquals("[A,B,C,D]", myCells.toString());
-        myCells.remove(2);
+        String removed = myCells.remove(2);
+        assertEquals("C", removed);
         assertEquals(3, myCells.size());
         assertEquals("[A,B,D]", myCells.toString());
-        myCells.remove(0);
+        removed = myCells.remove(0);
+        assertEquals("A", removed);
         assertEquals(2, myCells.size());
         assertEquals("[B,D]", myCells.toString());
 

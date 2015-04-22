@@ -61,6 +61,15 @@ public class StringArrayTest {
         assertEquals("A", array.get(0));   // индекс предыдущих элементов не изменился
         assertEquals("AA", array.get(1));   // изменен элемент с индексом вставки
         assertEquals("B", array.get(2));   // индекс следующего элементов изменился
+        assertEquals("[A, AA, B, C]", array.toString());
+        assertEquals("C", array.get(3));
+        array.insert(1, "AA");
+        assertEquals(5, array.size());
+        assertEquals("A", array.get(0));
+        assertEquals("AA", array.get(1));
+        assertEquals("AA", array.get(2));
+        assertEquals("B", array.get(3));
+        assertEquals("C", array.get(4));
 
 
     }

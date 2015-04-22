@@ -85,9 +85,9 @@ public class StringArray {
         if (index >= counter) {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
         }
-        add(array[counter]);
-        for (int j = index; j < size() - 1; j++) {
-            array[j + 1] = array[j];
+        add(array[index]);
+        for (int j = size() - 1; j > index; --j) {
+            array[j] = array[j - 1];
         }
         array[index] = value;
 

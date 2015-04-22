@@ -24,7 +24,7 @@ public class LinkedCellsTest {
     }
 
 
-     @Test
+    @Test
     public void getTest() {
         LinkedCells myCells = new LinkedCells();
         myCells.add("A");
@@ -81,9 +81,6 @@ public class LinkedCellsTest {
         assertEquals(7, myCells.size());
 
     }
-
-
-
 
 
 }

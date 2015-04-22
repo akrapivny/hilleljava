@@ -74,8 +74,8 @@ public class StringArray {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
         }
         String result = array[index];
-        for (int j = index; j < size()-1; j++) {
-            array[j] = array[j+1];
+        for (int j = index; j < size() - 1; j++) {
+            array[j] = array[j + 1];
         }
         counter--;
         return result;

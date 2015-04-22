@@ -1,6 +1,5 @@
 package com.hillel.java.oopBasics;
 
-
 /**
  * Created by KRAB on 17.04.2015.
  */
@@ -70,7 +69,7 @@ public class LinkedCells {
 
         if (index == 0) {
             result = currentCell.getValue();
-            head=currentCell.getNext();
+            head = currentCell.getNext();
 
         } else {
             int currentIndex = 0;

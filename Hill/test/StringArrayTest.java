@@ -1,11 +1,9 @@
+import com.hillel.java.javahome.StringArray;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
-import com.hillel.java.javahome.StringArray;
-
 
 /**
  * Created by ¿À≈ —≈… on 21.04.2015.

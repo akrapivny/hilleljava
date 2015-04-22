@@ -11,7 +11,6 @@ import static org.junit.Assert.assertTrue;
  */
 public class LinkedCellsTest {
 
-
     @Test
     public void sizeTest() {
         LinkedCells myCells = new LinkedCells();

@@ -1,11 +1,18 @@
 package com.hillel.java.javahome;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * Created by KRAB on 14.04.2015.
  */
-public class ImprovedArray {
+public class ImprovedArray implements Iterable {
+
+    @Override
+    public Iterator iterator() {
+        return new ArrayIterator(this);
+    }
+
 
     int counter = 0;
     String[] myArray = new String[10];

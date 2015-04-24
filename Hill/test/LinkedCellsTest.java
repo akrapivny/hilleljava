@@ -1,6 +1,7 @@
 import com.hillel.java.javahome.StringArray;
 import com.hillel.java.oopBasics.LinkedCells;
 
+import com.hillel.java.oopBasics.ListInterface;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -87,7 +88,7 @@ public class LinkedCellsTest {
 
     @Test
     public void addObjectTest() {
-        LinkedCells myCells = new LinkedCells();
+        ListInterface myCells = new LinkedCells();
         myCells.add("A");
         myCells.add(5);
         myCells.add(Math.PI);
@@ -98,6 +99,9 @@ public class LinkedCellsTest {
         myCells.insert(4, 7.1);
         myCells.insert(0, false);
         assertEquals("[false,A,5,6,3.141592653589793,7.1,true]", myCells.toString());
+
+
+
     }
 
 

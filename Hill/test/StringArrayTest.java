@@ -1,4 +1,5 @@
 import com.hillel.java.javahome.StringArray;
+import com.hillel.java.oopBasics.ListInterface;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -93,7 +94,7 @@ public class StringArrayTest {
 
     @Test
     public void addObjectTest() {
-        StringArray array = new StringArray();
+        ListInterface array = new StringArray();
         array.add("A");
         array.add(5);
         array.add(Math.PI);

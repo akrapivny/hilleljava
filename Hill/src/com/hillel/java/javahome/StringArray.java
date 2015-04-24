@@ -1,5 +1,6 @@
 package com.hillel.java.javahome;
 
+import com.hillel.java.oopBasics.ListInterface;
 import com.sun.deploy.util.ArrayUtil;
 
 import java.util.Arrays;
@@ -7,7 +8,7 @@ import java.util.Arrays;
 /**
  * Created by KRAB on 17.04.2015.
  */
-public class StringArray {
+public class StringArray implements ListInterface {
 
     private Object[] array = new Object[1];
 

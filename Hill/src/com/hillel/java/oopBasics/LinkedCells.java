@@ -3,7 +3,7 @@ package com.hillel.java.oopBasics;
 /**
  * Created by KRAB on 17.04.2015.
  */
-public class LinkedCells implements LinkedCellsInterface{
+public class LinkedCells implements ListInterface {
 
     private Cell head;
     private int counter;

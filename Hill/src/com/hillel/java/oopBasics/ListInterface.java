@@ -3,7 +3,7 @@ package com.hillel.java.oopBasics;
 /**
  * Created by ¿À≈ —≈… on 24.04.2015.
  */
-public interface LinkedCellsInterface {
+public interface ListInterface {
     public void add(Object value);
 
     public int size();

@@ -9,11 +9,11 @@ import java.util.Arrays;
  */
 public class StringArray {
 
-    private String[] array = new String[1];
+    private Object[] array = new Object[1];
 
     private int counter = 0;
 
-    public void add(String value) {
+    public void add(Object value) {
         if (array.length == counter) {
             resize();
         }
@@ -21,7 +21,7 @@ public class StringArray {
         counter++;
     }
 
-    public String get(int index) {
+    public Object get(int index) {
         if (index >= counter) {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
         }
@@ -73,15 +73,15 @@ public class StringArray {
         if (index >= counter) {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
         }
-        String result = array[index];
+        Object result = array[index];
         for (int j = index; j < size() - 1; j++) {
             array[j] = array[j + 1];
         }
         counter--;
-        return result;
+        return result.toString();
     }
 
-    public void insert(int index, String value) {
+    public void insert(int index, Object value) {
         if (index >= counter) {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
         }

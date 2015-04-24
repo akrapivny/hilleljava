@@ -90,4 +90,19 @@ public class StringArrayTest {
 
 
     }
+
+    @Test
+    public void addObjectTest() {
+        StringArray array = new StringArray();
+        array.add("A");
+        array.add(5);
+        array.add(Math.PI);
+        array.add(true);
+        assertEquals(4, array.size());
+        assertEquals("[A, 5, 3.141592653589793, true]", array.toString());
+        array.insert(2, 6);
+        array.insert(4, 7.1);
+        array.insert(0, false);
+        assertEquals("[false, A, 5, 6, 3.141592653589793, 7.1, true]", array.toString());
+    }
 }

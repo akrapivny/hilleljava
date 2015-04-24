@@ -3,14 +3,14 @@ package com.hillel.java.oopBasics;
 /**
  * Created by KRAB on 17.04.2015.
  */
-public class LinkedCells {
+public class LinkedCells implements LinkedCellsInterface{
 
     private Cell head;
     private int counter;
     private Cell tail;
 
 
-    public void add(String value) {
+    public void add(Object value) {
         Cell next = new Cell(value);
         if (head == null) {
             head = next;
@@ -30,7 +30,7 @@ public class LinkedCells {
         return head == null;
     }
 
-    public String get(int index) {
+    public Object get(int index) {
 
         if (index < 0 || index >= size()) {
             throw new IndexOutOfBoundsException("size: " + size() + ", index: " + index);
@@ -49,7 +49,7 @@ public class LinkedCells {
         String result = "[";
         Cell currentCell = head;
         while (currentCell != null) {
-            result += currentCell.getValue();
+            result += currentCell.getValue().toString();
             if (currentCell.getNext() != null) {
                 result += ",";
             }
@@ -68,7 +68,7 @@ public class LinkedCells {
         String result;
 
         if (index == 0) {
-            result = currentCell.getValue();
+            result = currentCell.getValue().toString();
             head = currentCell.getNext();
 
         } else {
@@ -77,14 +77,14 @@ public class LinkedCells {
                 currentCell = currentCell.getNext();
                 currentIndex++;
             }
-            result = currentCell.getNext().getValue();
+            result = currentCell.getNext().getValue().toString();
             currentCell.setNext(currentCell.getNext().getNext());
         }
         counter--;
         return result;
     }
 
-    public void insert(int index, String value) {
+    public void insert(int index, Object value) {
         if (index >= counter) {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + counter);
         }

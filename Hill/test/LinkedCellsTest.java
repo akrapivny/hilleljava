@@ -1,3 +1,4 @@
+import com.hillel.java.javahome.StringArray;
 import com.hillel.java.oopBasics.LinkedCells;
 
 import org.junit.Test;
@@ -82,6 +83,23 @@ public class LinkedCellsTest {
         assertEquals(7, myCells.size());
 
     }
+
+
+    @Test
+    public void addObjectTest() {
+        LinkedCells myCells = new LinkedCells();
+        myCells.add("A");
+        myCells.add(5);
+        myCells.add(Math.PI);
+        myCells.add(true);
+        assertEquals(4, myCells.size());
+        assertEquals("[A,5,3.141592653589793,true]", myCells.toString());
+        myCells.insert(2, 6);
+        myCells.insert(4, 7.1);
+        myCells.insert(0, false);
+        assertEquals("[false,A,5,6,3.141592653589793,7.1,true]", myCells.toString());
+    }
+
 
 
 }

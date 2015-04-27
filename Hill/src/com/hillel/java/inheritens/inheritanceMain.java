@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class inheritanceMain {
     public static void main(String[] args) {
-        Circle circle = new Circle(10);
+    /*    Circle circle = new Circle(10);
         Rectanglae rectanglae = new Rectanglae(10, 5);
 
         Colored c = circle;
@@ -15,8 +15,8 @@ public class inheritanceMain {
         ArrayList<Colored> list = new ArrayList<Colored>();
         list.add(circle);
         list.add(rectanglae);
-
-
+*/
+        polymorf();
     }
 
     private static void polymorf() {

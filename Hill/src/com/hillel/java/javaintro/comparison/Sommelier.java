@@ -7,7 +7,49 @@ import java.util.*;
  */
 public class Sommelier {
     public static void main(String[] args) {
-        Vine bottle1 = new Vine(1995, 200);
+
+        List<Vine> store = new ArrayList<>();
+        store.add(new Vine(1999, 200));
+        store.add(new Vine(1995, 250));
+        store.add(new Vine(1995, 240));
+        store.add(new Vine(1999, 200));
+        store.add(new ExpensiveVine(1965, 900));
+        store.add(new ExpensiveVine(1964, 900));
+        store.add(new CheapVine(2014, 50));
+        store.add(new CheapVine(2014, 50));
+        store.add(new CheapVine(2015, 50));
+
+
+        print(store);
+
+        Set<Vine> menu = new TreeSet<>();
+
+        menu.addAll(store);
+        System.out.println("Menu");
+
+        print(menu);
+
+        Set<Vine> orderByPrice = new TreeSet<>(new OrderByPriceYear());
+        orderByPrice.addAll(store);
+
+        System.out.println("Menu order by price");
+        print(orderByPrice);
+
+        // printTaste(lisr);
+    }
+
+    public static void print(Iterable<Vine> vines){
+        for (Vine vine: vines){
+            System.out.println(vine.toString());
+
+    }}
+
+    public static void printTaste(List<Vine> vines){
+        for (Vine vine: vines){
+            System.out.println(vine.taste());
+        }
+
+       /* Vine bottle1 = new Vine(1995, 200);
         Vine bottle2 = new Vine(1995, 100);
 
         System.out.println("they are equal "+bottle1.equals(bottle2));
@@ -24,8 +66,12 @@ public class Sommelier {
         Collections.sort(list);
         System.out.println(list);
 
-        Comparator<Vine> orderByPrice = new VineCorporator();
+        Comparator<Vine> orderByPrice = new OrderByPriceYear();
         Collections.sort(list,orderByPrice);
-        System.out.println(list);
+        System.out.println(list);*/
+
+
     }
-}
+
+    }
+

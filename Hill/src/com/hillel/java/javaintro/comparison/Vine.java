@@ -24,7 +24,7 @@ public class Vine implements Comparable<Vine>{
         }
         Vine other = (Vine) obj; //prikastovanie
 
-        return this.year == other.year;
+        return this.year == other.year && this.price==other.price;
 
     }
 
@@ -39,6 +39,19 @@ public class Vine implements Comparable<Vine>{
 
     @Override
     public int compareTo(Vine bottle2) {
-        return this.year- ((Vine) bottle2).year;
+        int result=this.year- ((Vine) bottle2).year;
+           if (result==0) {
+               result=this.price-bottle2.price;
+           }
+        return result;
+    }
+
+    public String taste(){
+        return  "nothing special";
+    }
+
+    public int getYear() {
+        return year;
     }
 }
+

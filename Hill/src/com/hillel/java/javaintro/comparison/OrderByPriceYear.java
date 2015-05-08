@@ -10,7 +10,9 @@ public class OrderByPriceYear implements Comparator<Vine>{
     @Override
     public int compare(Vine one, Vine other){
         int result =one.getPrice()-other.getPrice();
-        if (result==0) { result = one.getYear()-other.getYear();}
+        if (result==0) {
+            result = one.getYear()-other.getYear();
+        }
         return result;
     }
 }

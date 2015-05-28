@@ -20,6 +20,11 @@ public class JavaGroup {
 
         throw new UnknowStudentException("Unknow student "+name);
         }
+        Integer existedGrade = namesToGrades.get(name);
+        if (existedGrade!=null) {
+            throw new GradeAlredyExistException("name: "+ name + ", exist grade: "+existedGrade+", new grade: "+grade);
+        }
+        if (name == null) {throw new NullPointerException("name is null");}
     namesToGrades.put(name,grade);
     }
 

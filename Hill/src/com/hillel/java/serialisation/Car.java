@@ -22,6 +22,10 @@ public class Car implements Serializable {
         System.out.println("in constructor");
     }
 
+    public Car(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
     @Override
     public String toString() {
         return "Car{" +

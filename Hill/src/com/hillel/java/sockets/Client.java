@@ -7,27 +7,27 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * Created by AKRAPIVNY on 15.06.2015.
+ * @author ITyan on 15.06.2015.
  */
 public class Client {
 
-    public static void main(String[] args) throws IOException{
-        new Client().star();
+    public static void main(String[] args) throws IOException {
+        new Client().start();
     }
 
-    public void star() throws IOException{
+    public void start() throws IOException {
         Scanner scanner = new Scanner(System.in);
-        while (true){
+        while (true) {
             String line = scanner.nextLine();
             send(line);
         }
     }
 
-    public void send(String line) throws IOException{
-        Socket socket = new Socket("192.168.0.112",3111);
+    public void send(String line) throws IOException {
+        Socket socket = new Socket("192.168.0.112", 3111);
         PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
         writer.println(line);
-        writer.flush();
+
         writer.close();
         socket.close();
     }

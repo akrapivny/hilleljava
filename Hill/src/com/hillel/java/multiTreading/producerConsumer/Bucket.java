@@ -10,12 +10,15 @@ public class Bucket {
     public   void put() {
         synchronized(this) {
             while (count == maxCount) {
+                //if (Thread.currentThread().isInterrupted()){return;}
                 try {
                     wait();
                 } catch (InterruptedException e) {
+                    Thread.currentThread().isInterrupted();
                     return;
                 }
             }
+            System.out.println("producer: "+ count);
 
             count++;
             notify();
@@ -27,9 +30,11 @@ public class Bucket {
             try {
                 wait();
             } catch (InterruptedException e) {
+                Thread.currentThread().isInterrupted();
                 return;
             }
         }
+        System.out.println("consumer: "+ count);
         count--;
         notify();
     }

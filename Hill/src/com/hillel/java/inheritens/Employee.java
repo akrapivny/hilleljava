@@ -19,7 +19,7 @@ public class Employee extends Person {
 
     }
 
-    private String getDepartment() {
+    public String getDepartment() {
         return department;
     }
 

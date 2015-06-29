@@ -19,13 +19,13 @@ public class MultiThreadServer {
     }
 
     public void start() throws IOException {
-        ServerSocket serverSocket = new ServerSocket(3111);
+        /*ServerSocket serverSocket = new ServerSocket(3111);
 
         while (true) {
             Socket socket = serverSocket.accept();
 
             Thread thread = new Thread(new SockedThread(socket, ipToName));
             thread.start();
-        }
+        }*/
     }
 }

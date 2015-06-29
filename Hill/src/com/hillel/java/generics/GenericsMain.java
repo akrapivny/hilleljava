@@ -4,10 +4,7 @@ import com.hillel.java.inheritens.Employee;
 import com.hillel.java.inheritens.Manager;
 import com.hillel.java.inheritens.Person;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Created by NewClass9 on 25.06.2015.
@@ -41,7 +38,17 @@ public class GenericsMain {
         addEmployee(employees);
         addEmployee(persons);
 
+        managers = Collections.<Manager>emptyList();
 
+        employees = Collections.singletonList(manager);
+
+        List<Employee> copyEmployee = GenericsMain.<Employee>copyCollection(employees);
+
+
+    }
+
+    public static <T>List<T> copyCollection (List<T> source) {
+        return new ArrayList<>(source);
     }
 
     public static void addEmployee (List<? super Employee> employees) {
